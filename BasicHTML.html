@@ -16,8 +16,6 @@ Now, here I want to provide the basic stuff of HTML tags, attributes and other c
 </body>
 </html>
 
-<!---->
-
 <!--To comment something you just have to wrap your comment inside like this--> <!--[YOUR TEXT]-->
 
 <!--In body we can start adding some content like buttons, paragraphs and divs (Just remember that all tags start with <[tagname]> and end with </[tagname]>)-->
@@ -36,5 +34,48 @@ Now, here I want to provide the basic stuff of HTML tags, attributes and other c
 <h5>Heading 5</h5>                  <!--<h5></h5> Makes a heading (18 px)-->
 <h6>Heading 6</h6>                  <!--<h6></h6> Makes a heading (16 px)-->
 
-<!--The Img tags is a bit different. It does not have a closing tag. It has a lot of styling for the image (alt, width, height)-->
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Pantheon_Rom_1_cropped.jpg" alt="" width="1000px" >
+<!--The Img tags is a bit different. It does not have a closing tag. It has a lot of styling for the image (alt, width, loading, )-->
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Pantheon_Rom_1_cropped.jpg" alt="" width="100px" loading="lazy">
+
+<!--Other cool stuff-->
+<code>Put your code in this</code>  <!--Makes a box around the text that is code, for instance on github the box around the code. 
+                                    This can be styled with css by just using code{}, but this isn't a css tutorial ;)-->
+
+<!--Datalist for making basic search with basic dropdown-->
+<label for="browser">Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="browser">
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+<!--Creates a list that have a hierarchy. <dt> is the higher menu, dd is the sub-menu-->
+<dl>
+    <dt>Coffee:</dt>
+    <dd>Black hot drink</dd>
+    <dd>Some like it with milk</dd>
+    <dt>Milk:</dt>
+    <dd>White cold drink</dd>
+    <dd>Comes from the cow</dd>
+</dl>
+
+<!--This is some lists. Ordered and unordered. <li> is a list item-->
+<ol>                              <!--Ordered lists. List with 1. 2. 3. etc.-->
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+  
+<ul>                                <!--Unordered lists. List with dots-->
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+
+<!--THIS DOES NOT WORK ON SAFARI-->
+<ul>
+    <li><data value="20.00$">Pasta</data></li> <!--The <data> contains a value which in this exsample is 20.00$. The name is Pasta. You can use this for a restaurant, but it does not show the value.-->
+</ul>
