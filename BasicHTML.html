@@ -26,7 +26,7 @@ Now, here I want to provide the basic stuff of HTML tags, attributes and other c
 <a href="#"></a>                    <!--Makes a link that you can guide the user to. (Where there is a "#" you have to delete the "#" and replace it with your link!)-->
 <span>This is a span section</span> <!--Make a span, which can be used for sections-->
 
-<!--The numbers define the size of the text, h1 is the biggest and h6 is the smallest-->
+<!--The numbers define the size of the text, h1 is the biggest and h6 is the smallest. Of course you can change this with css-->
 <h1>Heading 1</h1>                  <!--<h1></h1> Makes a heading (34 px)-->
 <h2>Heading 2</h2>                  <!--<h2></h2> Makes a heading (30 px)-->
 <h3>Heading 3</h3>                  <!--<h3></h3> Makes a heading (24 px)-->
@@ -39,13 +39,13 @@ Now, here I want to provide the basic stuff of HTML tags, attributes and other c
 
 <!--Other cool stuff-->
 <code>Put your code in this</code>  <!--Makes a box around the text that is code, for instance on github the box around the code. 
-                                    This can be styled with css by just using code{}, but this isn't a css tutorial ;)-->
+                                    This can be styled with css, but this isn't a css tutorial ;D-->
 
 <!--Datalist for making basic search with basic dropdown-->
-<label for="browser">Choose your browser from the list:</label>
-<input list="browsers" name="browser" id="browser">
-<datalist id="browsers">
-  <option value="Edge">
+<label for="browser">Choose your browser from the list:</label>     <!--Makes the label that is the heading for your dropdown-->
+<input list="browsers" name="browser" id="browser">                 <!--Creates the input so that you can change the option-->
+<datalist id="browsers">                                            <!--Create the list-->
+  <option value="Edge">                                             <!--<option> create the options for the list-->
   <option value="Firefox">
   <option value="Chrome">
   <option value="Opera">
@@ -75,7 +75,13 @@ Now, here I want to provide the basic stuff of HTML tags, attributes and other c
     <li>Milk</li>
 </ul>
 
-<!--THIS DOES NOT WORK ON SAFARI-->
-<ul>
-    <li><data value="20.00$">Pasta</data></li> <!--The <data> contains a value which in this exsample is 20.00$. The name is Pasta. You can use this for a restaurant, but it does not show the value.-->
-</ul>
+<!--Data tags-->
+    <!--THIS DOES NOT WORK ON SAFARI-->
+    <ul>
+        <li><data value="20.00$">Pasta</data></li> <!--The <data> contains a value which in this exsample is 20.00$. The name is Pasta. You can use this for a restaurant, but it does not show the value.-->
+    </ul>
+
+    <!--Here is another way to add data to a list item-->
+    <ul>
+        <li data-price="20.00$" data-nationality="Italian">Pasta</li> <!--You can add these custom data values that is better than the <data> tag-->
+    </ul>
